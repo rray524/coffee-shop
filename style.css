@@ -50,6 +50,9 @@ img{
 header {
     margin-top: 39px;
 }
+.mobile-menu {
+    display: none;
+}
 .logo-area {
     display: flex;
     justify-content: center;
@@ -70,10 +73,14 @@ header {
     background-image: url(icon-arrow.png);
     content: "";
     height: 8px;
-    left: 66px;
+    left: 11%;
     position: absolute;
-    bottom: 139px;
+    bottom: 25%;
     width: 28px;
+}
+.slider-image:hover{
+    transform: translateX(0px) translateY(75px);
+    transition: transform 500ms ease-in-out 25ms;
 }
 ul.menu {
     display: flex;
@@ -126,6 +133,9 @@ h1.slider-title{
     line-height: var(--h1-font-line-height);
     color: var(--header-text-color);
 }
+a.order-btn-mobile{
+    display: none;
+}
 a.order-btn {
     text-decoration: none;
     font-family: var(--button-font);
@@ -135,6 +145,34 @@ a.order-btn {
     line-height: 25px;
     padding: 15px 66px;
     border-radius: 5px;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    overflow: hidden;
+
+}
+a.order-btn:before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 100%;
+    bottom: 0;
+    background: #FAE9E0;
+    height: 4px;
+    -webkit-transition-property: right;
+    transition-property: right;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+a.order-btn:hover, a.order-btn:active, a.order-btn:focus{
+ 
+  }
+a.order-btn:hover:before, a.order-btn:active:before, a.order-btn:focus:before{
+    right: 0;
 }
 .slider-image img {
     width: 570px;
@@ -266,6 +304,9 @@ hr {
     font-size: 32px;
     line-height: 45px;
 }
+a.order-btn-mobile-footer {
+    display: none;
+}
 
 /*== Media query ==*/
 @media only screen and ( min-width:768px ) and ( max-width: 1221px ) {
@@ -317,5 +358,117 @@ hr {
     }
     .horizontal-line {
         top: -35px;
+    }
+}
+@media only screen and ( min-width:320px ) and ( max-width: 767px ) {
+    .mobile-menu {
+        display: block;
+    }
+    .menu-area {
+        display: none;
+    }
+    .container {
+        width: 90%;
+        justify-content: space-evenly;
+    }
+    .slider-image {
+        display: none;
+    }
+    .container.slider-area {
+        grid-template-columns: 1fr;
+    }
+    .slider-social {
+        display: none;
+    }
+    h1.slider-title {
+        font-size: 49px;
+    }
+    .slider-title-area {
+        text-align: center;
+    }
+    span.slider-slogan {
+        font-size: 19px;
+        line-height: 28px;
+    }
+    img.white-arrow {
+        width: 22px;
+        padding-left: 21px;
+    }
+    a.order-btn{
+        display: none;
+    }
+    a.order-btn-mobile {
+        display: inline-block;
+        text-decoration: none;
+        font-family: var(--button-font);
+        background-color: var(--button-background);
+        color: #fff;
+        font-size: 16px;
+        line-height: 14px;
+        padding: 11px 33px;
+        border-radius: 4px;
+    }
+    section.about-us-area {
+        margin-top: 68px;
+    }
+    .container.about-area {
+        grid-template-columns: 1fr;
+        grid-column-gap: 0;
+    }
+    .about-us-img img {
+        width: 100%;
+    }
+    section.promotion-area {
+        margin-top: 10px;
+    }
+    .container.promotion {
+        grid-template-columns: 1fr;
+        grid-column-gap: 0;
+    }
+    .promotion-content {
+        order: 2;
+    }
+    section.carousel-area {
+        margin-top: 5px;
+        padding: 35px 0 20px;
+    }
+    .container.carousel-elaka {
+        grid-template-columns: 1fr;
+        grid-gap: 15px;
+    }
+    .right-icon, .left-icon {
+        display: none;
+    }
+    .card-1 a.order-btn, .card-2 a.order-btn, .card-3 a.order-btn {
+        display: block;
+        padding: 11px 25px;
+    }
+    section.contact-area {
+        padding: 22px 0 12px;
+    }
+    .container.map-area {
+        grid-template-columns: 1fr;
+        align-items: center;
+    }
+    .horizontal-line {
+        display: none;
+    }
+    .address {
+        text-align: center;
+    }
+    .mb-hidden{
+        display: none;
+    }
+    a.order-btn-mobile-footer {
+        display: inline-block;
+        text-decoration: none;
+        font-family: var(--button-font);
+        background-color: #ffffff;
+        color: #444A4A;
+        font-size: 16px;
+        line-height: 14px;
+        padding: 17px 21px;
+        border-radius: 4px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.17);
     }
 }
