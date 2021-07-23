@@ -268,6 +268,54 @@ hr {
 }
 
 /*== Media query ==*/
-@media only screen and (min-width:768px) and (max-width:1221px) {
-    
+@media only screen and ( min-width:768px ) and ( max-width: 1221px ) {
+    .container {
+        flex-direction: column;
+        width: 97%;
+    }
+    header {
+        margin-top: 20px;
+    }
+    .logo-area {
+        flex-direction: column;
+    }
+    ul.menu li {
+        margin-right: 71px;
+    }
+    .container.slider-area {
+        grid-template-columns: 1fr 1fr .10fr;
+    }
+    .slider-image img {
+        width: 100%;
+        height: auto;
+    }
+    section.about-us-area {
+        margin-top: 21px;
+    }
+    .about-us-img img {
+        width: 100%;
+    }
+    section.promotion-area {
+        margin-top: 0px;
+    }
+
+    .card-1, .card-2, .card-3 {
+        border-radius: 18px;
+        padding: 22px 8px;
+    }
+    .container.carousel-elaka {
+        grid-gap: 14px;
+    }
+    i.fas.fa-angle-left, i.fas.fa-angle-right {
+        font-size: 26px;
+    }
+    section.contact-area {
+        padding: 3px 0 5px;
+    }
+    .container.map-area {
+        align-items: center;
+    }
+    .horizontal-line {
+        top: -35px;
+    }
 }
