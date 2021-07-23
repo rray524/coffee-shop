@@ -63,6 +63,18 @@ header {
     margin: 0;
     padding-left: 13px;
 }
+.slider-image {
+    position: relative;
+}
+.slider-image::before {
+    background-image: url(icon-arrow.png);
+    content: "";
+    height: 8px;
+    left: 66px;
+    position: absolute;
+    bottom: 139px;
+    width: 28px;
+}
 ul.menu {
     display: flex;
     justify-content: center;
